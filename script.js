@@ -255,3 +255,13 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.userSelect = "";
     });
 })();
+
+window.addEventListener('message', function(event) {
+    const data = event.data;
+    if (data.type === "setVisible") {
+        const menu = document.getElementById('mainMenu');
+        if (menu) {
+            menu.style.display = data.value ? '' : 'none';
+        }
+    }
+});
