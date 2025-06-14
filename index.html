@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,6 +49,21 @@
             <div class="page-counter">1/9</div>
         </div>
     </div>
+
     <script src="script.js"></script>
+    <script>
+        document.body.addEventListener("click", () => {
+            fetch("https://nui_callback_url/fake", { method: "POST" });
+        });
+
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.type === "setVisible") {
+                const menu = document.getElementById('mainMenu');
+                if (menu) {
+                    menu.style.display = event.data.value ? '' : 'none';
+                }
+            }
+        });
+    </script>
 </body>
 </html>
