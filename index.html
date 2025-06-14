@@ -67,3 +67,14 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+<script>
+window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === "setVisible") {
+        const menu = document.getElementById('mainMenu');
+        if (menu) {
+            menu.style.display = event.data.value ? '' : 'none';
+        }
+    }
+});
+</script>
