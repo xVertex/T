@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-        <div class="mod-menu-container" id="mainMenu">
+    <div class="mod-menu-container" id="mainMenu">
         <div class="mod-menu-header">
             <img src="https://i.ibb.co/7Jpp3LDH/Chat-GPT-Image-7-2025-07-07-25.png" alt="Menu Banner" class="header-banner">
             <div class="header-title-bar">
@@ -33,48 +33,21 @@
                 <div class="tab-content active" id="self-tab">
                     <div class="menu-section"><h2>Self Options</h2><p>...</p></div>
                 </div>
-                <div class="tab-content" id="online-tab">
-                    <div class="menu-section"><h2>Online Options</h2><p>...</p></div>
-                </div>
-                <div class="tab-content" id="combat-tab">
-                    <div class="menu-section"><h2>Combat/Weapons Options</h2><p>...</p></div>
-                </div>
-                <div class="tab-content" id="visual-tab">
-                    <div class="menu-section"><h2>Visual Options</h2><p>...</p></div>
-                </div>
-                <div class="tab-content" id="vehicle-tab">
-                    <div class="menu-section"><h2>Vehicle Options</h2><p>...</p></div>
-                </div>
-                <div class="tab-content" id="misc-tab">
-                    <div class="menu-section"><h2>Miscellaneous Options</h2><p>...</p></div>
-                </div>
-                <div class="tab-content" id="destructive-tab">
-                    <div class="menu-section"><h2>Destructive Options</h2><p>...</p></div>
-                </div>
-                <div class="tab-content" id="triggers-tab">
-                    <div class="menu-section"><h2>Triggers Options</h2><p>...</p></div>
-                </div>
-                <div class="tab-content" id="settings-tab">
-                    <div class="menu-section"><h2>Settings Options</h2><p>...</p></div>
-                </div>
+                <div class="tab-content" id="online-tab"><div class="menu-section"><h2>Online Options</h2><p>...</p></div></div>
+                <div class="tab-content" id="combat-tab"><div class="menu-section"><h2>Combat Options</h2><p>...</p></div></div>
+                <div class="tab-content" id="visual-tab"><div class="menu-section"><h2>Visual Options</h2><p>...</p></div></div>
+                <div class="tab-content" id="vehicle-tab"><div class="menu-section"><h2>Vehicle Options</h2><p>...</p></div></div>
+                <div class="tab-content" id="misc-tab"><div class="menu-section"><h2>Misc Options</h2><p>...</p></div></div>
+                <div class="tab-content" id="destructive-tab"><div class="menu-section"><h2>Destructive</h2><p>...</p></div></div>
+                <div class="tab-content" id="triggers-tab"><div class="menu-section"><h2>Triggers</h2><p>...</p></div></div>
+                <div class="tab-content" id="settings-tab"><div class="menu-section"><h2>Settings</h2><p>...</p></div></div>
             </div>
         </div>
         <div class="mod-menu-footer">
-            <div class="version-info">Version: Beta | 24hrs ago (pls report bugs)</div>
+            <div class="version-info">Version: Beta | 24hrs ago</div>
             <div class="page-counter">1/9</div>
         </div>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
-
-<script>
-window.addEventListener('message', function(event) {
-    if (event.data && event.data.type === "setVisible") {
-        const menu = document.getElementById('mainMenu');
-        if (menu) {
-            menu.style.display = event.data.value ? '' : 'none';
-        }
-    }
-});
-</script>
